@@ -1,10 +1,14 @@
 # lnd playground
 Spin up a quick lnd testnet playground in virtual env with neutrino
 
+## requires
+pipenv
+tmux
+
 ## install
 ```
-git clone git@github.com:dgnsrekt/nox_lighting_playground.git
-cd  nox_lighting_playground
+git clone git@github.com:dgnsrekt/quick_lnd_playground.git
+cd quick_lnd_playground
 pipenv install
 git clone git@github.com:dgnsrekt/lnd_grpc.git
 cd lnd_grpc
@@ -13,7 +17,9 @@ cd ..
 pipenv run pip install -e lnd_grpc
 pipenv shell
 
+tmux
 ```
+after running tmux split the screen
 ## download and start lnd
 ```
 invoke server
