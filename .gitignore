@@ -1,3 +1,5 @@
 .lnd
+bin
 client
 server
+*.tar.gz
