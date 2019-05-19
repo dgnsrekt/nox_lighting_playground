@@ -1,6 +1,7 @@
+# lnd playground
 Spin up a quick lnd testnet playground in virtual env with neutrino
 
-# install
+## install
 ```
 git clone git@github.com:dgnsrekt/nox_lighting_playground.git
 cd  nox_lighting_playground
@@ -13,25 +14,25 @@ pipenv run pip install -e lnd_grpc
 pipenv shell
 
 ```
-# download and start lnd
+## download and start lnd
 ```
 invoke server
 ```
 
-# create password
+## create password
 ```
 invoke client
 ```
 enter password twice
 select n twice
 
-# unlock lnd
+## unlock lnd
 ```
 invoke unlock
 ```
 enter password
 
-# playground
+## playground
 ```
 python3 playground.py
 ```
