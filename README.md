@@ -27,10 +27,10 @@ invoke server
 
 ## create password
 ```
-invoke client
+invoke create
 ```
 enter password twice
-select n twice
+hit enter twice
 
 ## unlock lnd
 ```
