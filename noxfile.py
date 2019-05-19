@@ -4,6 +4,10 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).parent
 LND_DIR = ROOT_DIR / ".lnd"
 
+LND_URL = (
+    "https://github.com/lightningnetwork/lnd/releases/download/v0.6.1-beta/lnd-linux-amd64-v0.6.1-beta.tar.gz",
+)
+
 # nox -s server
 # nox -s client create
 # nox -s client
@@ -15,16 +19,11 @@ def server(session):
     session.run("rm", "-f", "lnd-linux-amd64-v0.6.1-beta.tar.gz", external=True)
     session.run("rm", "-rf", "lnd-linux-amd64-v0.6.1-beta", external=True)
 
-    session.run(
-        "wget",
-        "https://github.com/lightningnetwork/lnd/releases/download/v0.6.1-beta/lnd-linux-amd64-v0.6.1-beta.tar.gz",
-        external=True,
-    )
+    session.run("wget", LND_URL, external=True)
 
     session.run("tar", "-xzf", "lnd-linux-amd64-v0.6.1-beta.tar.gz", external=True)
     session.run("ls", external=True)
     session.run("cp", "lnd-linux-amd64-v0.6.1-beta/lnd", session.bin, external=True)
-    session.run("cp", "lnd-linux-amd64-v0.6.1-beta/lncli", session.bin, external=True)
     session.run("mkdir", "-p", str(LND_DIR), external=True)
 
     session.run("rm", "-f", "lnd-linux-amd64-v0.6.1-beta.tar.gz", external=True)
@@ -47,15 +46,10 @@ def client(session):
     session.run("rm", "-f", "lnd-linux-amd64-v0.6.1-beta.tar.gz", external=True)
     session.run("rm", "-rf", "lnd-linux-amd64-v0.6.1-beta", external=True)
 
-    session.run(
-        "wget",
-        "https://github.com/lightningnetwork/lnd/releases/download/v0.6.1-beta/lnd-linux-amd64-v0.6.1-beta.tar.gz",
-        external=True,
-    )
+    session.run("wget", LND_URL, external=True)
 
     session.run("tar", "-xzf", "lnd-linux-amd64-v0.6.1-beta.tar.gz", external=True)
     session.run("ls", external=True)
-    session.run("cp", "lnd-linux-amd64-v0.6.1-beta/lnd", session.bin, external=True)
     session.run("cp", "lnd-linux-amd64-v0.6.1-beta/lncli", session.bin, external=True)
     session.run("mkdir", "-p", str(LND_DIR), external=True)
 
