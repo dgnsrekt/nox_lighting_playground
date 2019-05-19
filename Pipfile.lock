@@ -105,11 +105,11 @@
         },
         "lnd-grpc": {
             "hashes": [
-                "sha256:7d84bf95ca6119de3297f58d2828ff90a2b7ba23f2df73320428d301e00e0145",
-                "sha256:8dff1d4d90bca876f5004510a7d0a2d420816ba038132eff1ebd600cfac2c860"
+                "sha256:0542c72428e85094e5c3b1042ca2049ea6027ef75da37a0e254c59b15bd01495",
+                "sha256:9c08034575cce6163c20f0d760eb21c6d64166d50113a739c9bd1ea6bbafe85b"
             ],
             "index": "pypi",
-            "version": "==0.2.6"
+            "version": "==0.3.3"
         },
         "nox": {
             "hashes": [
@@ -158,10 +158,10 @@
         },
         "virtualenv": {
             "hashes": [
-                "sha256:15ee248d13e4001a691d9583948ad3947bcb8a289775102e4c4aa98a8b7a6d73",
-                "sha256:bfc98bb9b42a3029ee41b96dc00a34c2f254cbf7716bec824477b2c82741a5c4"
+                "sha256:99acaf1e35c7ccf9763db9ba2accbca2f4254d61d1912c5ee364f9cc4a8942a0",
+                "sha256:fe51cdbf04e5d8152af06c075404745a7419de27495a83f0d72518ad50be3ce8"
             ],
-            "version": "==16.5.0"
+            "version": "==16.6.0"
         }
     },
     "develop": {}
