@@ -3,3 +3,4 @@ bin
 client
 server
 *.tar.gz
+lnd_grpc
